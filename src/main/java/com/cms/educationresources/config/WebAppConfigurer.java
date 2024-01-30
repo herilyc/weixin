@@ -10,5 +10,6 @@ public class WebAppConfigurer implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/image/swiper/**").addResourceLocations("file:D:/Graduation Project/images/swiperImages/");
         registry.addResourceHandler("/image/subjects/**").addResourceLocations("file:D:/Graduation Project/images/subjectImages/");
+        registry.addResourceHandler("/image/bookCover/**").addResourceLocations("file:D:/Graduation Project/images/bookImages/");
     }
 }

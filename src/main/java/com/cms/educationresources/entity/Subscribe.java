@@ -5,34 +5,30 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-import java.util.List;
-
 import lombok.Data;
 
 /**
  * 
- * @TableName category
+ * @TableName subscribe
  */
-@TableName(value ="category")
+@TableName(value ="subscribe")
 @Data
-public class Category implements Serializable {
+public class Subscribe implements Serializable {
     /**
      * 
      */
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
      * 
      */
-    private String subject;
+    private String bookname;
 
     /**
      * 
      */
-    private String subjectpic;
-
-    @TableField(select = false)
-    private List<Book> sbjBookList;
+    private String userid;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

@@ -12,11 +12,11 @@ import lombok.Data;
 
 /**
  * 
- * @TableName book
+ * @TableName conversations
  */
-@TableName(value ="book")
+@TableName(value ="conversations")
 @Data
-public class Book implements Serializable {
+public class Conversations implements Serializable {
     /**
      * 
      */
@@ -26,32 +26,17 @@ public class Book implements Serializable {
     /**
      * 
      */
-    private String name;
+    private String avatarurl;
 
     /**
      * 
      */
-    private String author;
+    private String sender;
 
     /**
      * 
      */
-    private String subject;
-
-    /**
-     * 
-     */
-    private String grade;
-
-    /**
-     * 
-     */
-    private String description;
-
-    /**
-     * 
-     */
-    private String coverurl;
+    private String receiver;
 
     /**
      * 
@@ -62,17 +47,17 @@ public class Book implements Serializable {
     /**
      * 
      */
-    private Integer isswiper;
+    private String message;
 
-    /**
-     * 
-     */
-    private String swiperpic;
+    @TableField(select = false, exist = false)
+    private String senderCode;
 
-    /**
-     * 
-     */
-    private Integer swipersort;
+    @TableField(select = false, exist = false)
+    private String receiverCode;
+
+    @TableField(select = false, exist = false)
+    private String receiverName;
+
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

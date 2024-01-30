@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cms.educationresources.mapper.ConversationsMapper">
+
+    <resultMap id="BaseResultMap" type="com.cms.educationresources.entity.Conversations">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="avatarurl" column="avatarUrl" jdbcType="VARCHAR"/>
+            <result property="sender" column="sender" jdbcType="VARCHAR"/>
+            <result property="receiver" column="receiver" jdbcType="VARCHAR"/>
+            <result property="time" column="time" jdbcType="TIMESTAMP"/>
+            <result property="message" column="message" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,avatarUrl,sender,
+        receiver,time,message
+    </sql>
+</mapper>

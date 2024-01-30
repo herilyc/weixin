@@ -17,18 +17,13 @@ public class User implements Serializable {
     /**
      * 
      */
-    @TableId(type = IdType.AUTO)
-    private Integer id;
+    @TableId
+    private String id;
 
     /**
      * 
      */
-    private String name;
-
-    /**
-     * 
-     */
-    private Integer age;
+    private String nickname;
 
     /**
      * 
@@ -38,12 +33,7 @@ public class User implements Serializable {
     /**
      * 
      */
-    private String password;
-
-    /**
-     * 
-     */
-    private Integer isTeacher;
+    private Integer isteacher;
 
     /**
      * 
@@ -54,6 +44,19 @@ public class User implements Serializable {
      * 
      */
     private String introduction;
+
+    /**
+     * 
+     */
+    private String avatarurl;
+
+    /**
+     * 
+     */
+    private String password;
+
+    @TableField(select = false,exist = false)
+    private String code;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

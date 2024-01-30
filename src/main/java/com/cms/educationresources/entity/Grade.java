@@ -11,28 +11,24 @@ import lombok.Data;
 
 /**
  * 
- * @TableName category
+ * @TableName grade
  */
-@TableName(value ="category")
+@TableName(value ="grade")
 @Data
-public class Category implements Serializable {
+public class Grade implements Serializable {
     /**
      * 
      */
+    @TableId
     private Integer id;
 
     /**
      * 
      */
-    private String subject;
-
-    /**
-     * 
-     */
-    private String subjectpic;
+    private String grade;
 
     @TableField(select = false)
-    private List<Book> sbjBookList;
+    private List<Book> gradeBookList;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

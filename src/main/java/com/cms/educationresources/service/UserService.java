@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 /**
 * @author cjl
 * @description 针对表【user】的数据库操作Service
-* @createDate 2023-12-20 17:41:56
+* @createDate 2024-01-19 15:00:19
 */
 public interface UserService extends IService<User> {
 
